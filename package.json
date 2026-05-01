@@ -1,0 +1,12 @@
+{
+  "name": "roblox-packages-mono",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepo for reusable Roblox/Flamework packages",
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

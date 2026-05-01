@@ -1,0 +1,9 @@
+{
+  "name": "rbx-ui",
+  "tree": {
+    "$className": "Folder",
+    "out": {
+      "$path": "out"
+    }
+  }
+}

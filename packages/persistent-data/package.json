@@ -1,0 +1,35 @@
+{
+  "name": "@trembus/persistent-data",
+  "version": "0.1.0",
+  "description": "Type-safe player data persistence for roblox-ts games, wrapping @rbxts/profile-store",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@rbxts/services": "^1.5.0",
+    "@rbxts/profile-store": "^1.0.3"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/profile-store": "^1.0.3",
+    "@rbxts/services": "^1.6.0",
+    "@rbxts/types": "^1.0.914",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  },
+  "dependencies": {
+    "@rbxts/t": "^3.2.1"
+  }
+}

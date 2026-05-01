@@ -1,0 +1,34 @@
+{
+  "name": "@trembus/slotable-items",
+  "version": "0.1.0",
+  "description": "Unified RPG inventory system for roblox-ts — item types, slot management, loadouts, and network operations",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@trembus/persistent-data": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@trembus/persistent-data": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.914",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@trembus/timer-ui",
+  "version": "0.1.0",
+  "description": "Roblox ScreenGui display and visual effects for @trembus/timer — anchoring, color shift, pulse, shake, fade, and more",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@rbxts/services": "^1.5.0",
+    "@trembus/timer": "^0.1.0"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/services": "^1.6.0",
+    "@rbxts/types": "^1.0.914",
+    "@trembus/timer": "workspace:*",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}
