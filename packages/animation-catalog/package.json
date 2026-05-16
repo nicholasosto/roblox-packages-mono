@@ -1,0 +1,32 @@
+{
+  "name": "@trembus/animation-catalog",
+  "version": "0.1.0",
+  "description": "Typed composable animation catalog for roblox-ts — logical names → catalog entries with assetId, rig compatibility, length, priority, and status",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out",
+    "sync": "tsx scripts/sync-from-sources.ts",
+    "validate-catalog": "tsx scripts/validate-catalog.ts"
+  },
+  "peerDependencies": {
+    "@rbxts/services": "^1.5.0"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/services": "^1.6.0",
+    "@rbxts/types": "^1.0.914",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}

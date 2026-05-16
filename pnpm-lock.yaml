@@ -8,6 +8,24 @@ importers:
 
   .: {}
 
+  packages/animation-catalog:
+    devDependencies:
+      '@rbxts/compiler-types':
+        specifier: 3.0.0-types.0
+        version: 3.0.0-types.0
+      '@rbxts/services':
+        specifier: ^1.6.0
+        version: 1.6.0
+      '@rbxts/types':
+        specifier: ^1.0.914
+        version: 1.0.915
+      roblox-ts:
+        specifier: ^3.0.0
+        version: 3.0.0
+      typescript:
+        specifier: 5.5.3
+        version: 5.5.3
+
   packages/audio:
     devDependencies:
       '@rbxts/compiler-types':

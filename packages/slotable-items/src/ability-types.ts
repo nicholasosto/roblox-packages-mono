@@ -44,6 +44,18 @@ export interface AbilityCatalogEntry {
   readonly resourceCost: number;
   readonly targeting: AbilityTargetingConfig;
   readonly effects: readonly AbilityEffect[];
+  /**
+   * Logical name into `@trembus/animation-catalog` (e.g. `"combat.melee.punchLeft"`).
+   *
+   * Resolved at runtime via `getAnimation(animationId)?.assetId`. Previously this
+   * field held a raw `"rbxassetid://N"` string; as of taxonomy.yaml v1.3.0 + the
+   * animation-catalog package, abilities reference animations symbolically so they
+   * survive re-uploads (asset IDs change; logical names don't).
+   *
+   * For animations not yet catalogued, a raw `rbxassetid://` is still tolerated
+   * but discouraged — runtime code should fall back to direct ID only when
+   * `getAnimation` returns undefined.
+   */
   readonly animationId?: string;
   readonly soundEffectId?: string;
   readonly vfxAssetId?: string;
