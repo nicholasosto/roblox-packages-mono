@@ -22,10 +22,19 @@ Monorepo for reusable Roblox/Flamework packages published under the `@trembus` s
 
 | Package | Scope | Description |
 |---------|-------|-------------|
-| `rig-spawner` | `@trembus/rig-spawner` | Flamework service for cataloging and spawning character rigs |
+| `animation-catalog` | `@trembus/animation-catalog` | Typed composable animation catalog — logical names → catalog entries with assetId, rig compatibility, length, priority, and status |
+| `audio` | `@trembus/audio` | Unified audio manager — SFX pooling, music crossfading, volume/mute control |
+| `currency` | `@trembus/currency` | Currency system — open registry, pure transactions, Wallet runtime, and composable persistence slice |
 | `logger` | `@trembus/logger` | Structured, tag-based logging with level filtering and formatting |
 | `persistent-data` | `@trembus/persistent-data` | Type-safe player data persistence wrapping @rbxts/profile-store |
-| `audio` | `@trembus/audio` | Unified audio manager — SFX pooling, music crossfading, volume/mute control |
+| `pets-and-mounts` | `@trembus/pets-and-mounts` | Pet and mount summoning, follow behavior (AlignPosition), ride mechanics (VehicleSeat + network ownership), and ownership persistence slice |
+| `rbx-ui` | `@trembus/rbx-ui` | Roblox React UI component library — design tokens, atoms, molecules, organisms, and screen-level game UIs |
+| `rig-spawner` | `@trembus/rig-spawner` | Flamework service for cataloging and spawning character rigs |
+| `slotable-items` | `@trembus/slotable-items` | Unified RPG inventory system — item types, slot management, loadouts, and network operations |
+| `stats` | `@trembus/stats` | Two-tier stat system — primary attributes, derived stats, resource pools, and persistence slice |
+| `status-effects` | `@trembus/status-effects` | Generic status effect system — shields, damage calcs, buff tracking, effect aggregation |
+| `timer` | `@trembus/timer` | Framework-agnostic timer system — state machine, formatting, thresholds, and global signal bus |
+| `timer-ui` | `@trembus/timer-ui` | Roblox ScreenGui display and visual effects for `@trembus/timer` — anchoring, color shift, pulse, shake, fade, and more |
 
 ## Commands
 
@@ -52,6 +61,8 @@ pnpm --filter @trembus/<package-name> clean
 5. Set `"main": "out/init.lua"` and `"types": "out/index.d.ts"`
 6. Run `pnpm install` from the workspace root
 
+> Full procedure (build, publish, edge cases for Flamework/Rojo/React/internal deps): [docs/sops/adding-a-package.md](docs/sops/adding-a-package.md)
+
 ## Conventions
 
 1. **One concern per package** — each package should do one thing well
@@ -59,6 +70,12 @@ pnpm --filter @trembus/<package-name> clean
 3. **Peer dependencies** — common libs like `@rbxts/services` should be peerDependencies, not direct
 4. **Type safety** — `strict: true` in all tsconfig files
 5. **No game-specific logic** — packages are reusable across projects; game-specific wiring belongs in the consuming project
+
+## SOPs
+
+Process documents live in [`docs/sops/`](docs/sops/).
+
+- [Adding a New Package](docs/sops/adding-a-package.md) — full procedure for scaffolding, building, publishing, and consumer-testing a new `@trembus/*` package, including the Flamework / Rojo / React / internal-dep variants
 
 ## Related
 

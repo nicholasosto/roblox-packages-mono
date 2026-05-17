@@ -1,0 +1,45 @@
+{
+  "name": "@trembus/pets-and-mounts",
+  "version": "0.1.0",
+  "description": "Pet and mount summoning, follow behavior, ride mechanics, and ownership persistence for roblox-ts games",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@rbxts/services": "^1.5.0",
+    "@rbxts/signal": "^1.1.1",
+    "@trembus/animation-catalog": "^0.1.0",
+    "@trembus/logger": "^0.1.0",
+    "@trembus/persistent-data": "^0.1.0",
+    "@trembus/rig-spawner": "^0.1.0",
+    "@trembus/status-effects": "^0.1.0"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/services": "^1.6.0",
+    "@rbxts/signal": "^1.1.1",
+    "@rbxts/types": "^1.0.914",
+    "@trembus/animation-catalog": "workspace:*",
+    "@trembus/logger": "workspace:*",
+    "@trembus/persistent-data": "workspace:*",
+    "@trembus/rig-spawner": "workspace:*",
+    "@trembus/status-effects": "workspace:*",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "dependencies": {
+    "@rbxts/t": "^3.2.1"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}
