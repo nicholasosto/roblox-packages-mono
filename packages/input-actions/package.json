@@ -1,0 +1,32 @@
+{
+  "name": "@trembus/input-actions",
+  "version": "0.1.0",
+  "description": "Framework-agnostic multi-device input architecture for roblox-ts — Actions (logical names), Contexts (priority-stacked binding sets), and a Bus (signal-based event fan-out). KBM + Gamepad + Touch, multi-key chord support, modal sink contexts.",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@rbxts/services": "^1.5.0",
+    "@rbxts/signal": "^1.1.1"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/services": "^1.6.0",
+    "@rbxts/signal": "^1.1.1",
+    "@rbxts/types": "^1.0.914",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}
