@@ -13,7 +13,7 @@
     "clean": "rm -rf out"
   },
   "peerDependencies": {
-    "@trembus/persistent-data": "workspace:*"
+    "@trembus/persistent-data": "^0.1.0"
   },
   "peerDependenciesMeta": {
     "@trembus/persistent-data": {
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@rbxts/compiler-types": "3.0.0-types.0",
     "@rbxts/types": "^1.0.914",
+    "@trembus/persistent-data": "workspace:*",
     "roblox-ts": "^3.0.0",
     "typescript": "5.5.3"
   },

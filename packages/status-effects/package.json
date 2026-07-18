@@ -12,7 +12,6 @@
     "watch": "rbxtsc -w",
     "clean": "rm -rf out"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@rbxts/compiler-types": "3.0.0-types.0",
     "@rbxts/types": "^1.0.914",

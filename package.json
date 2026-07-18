@@ -2,7 +2,12 @@
   "name": "roblox-packages-mono",
   "version": "0.1.0",
   "private": true,
-  "description": "Monorepo for reusable Roblox/Flamework packages",
+  "description": "Monorepo for reusable roblox-ts packages",
+  "scripts": {
+    "build": "pnpm -r build",
+    "watch": "pnpm -r --parallel watch",
+    "clean": "pnpm -r clean"
+  },
   "author": "Trembus Technologies",
   "license": "MIT",
   "volta": {

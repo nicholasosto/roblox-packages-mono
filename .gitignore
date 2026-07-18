@@ -1,5 +1,6 @@
-node_modules/
+node_modules
 out/
+.claude/settings.local.json
 *.rbxl
 *.rbxlx
 *.rbxm

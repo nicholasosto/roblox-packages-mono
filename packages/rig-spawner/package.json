@@ -1,7 +1,7 @@
 {
   "name": "@trembus/rig-spawner",
   "version": "0.1.0",
-  "description": "Flamework service for cataloging and spawning character rigs in roblox-ts games",
+  "description": "Rig catalog and spawn service for character rigs in roblox-ts games",
   "main": "out/init.lua",
   "types": "out/index.d.ts",
   "files": [

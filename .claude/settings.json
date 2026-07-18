@@ -1,0 +1,8 @@
+{
+  "enabledPlugins": {
+    "delivery-ops@local-desktop-app-uploads": false,
+    "lore-brain@local-desktop-app-uploads": false,
+    "frontend-design@claude-plugins-official": false,
+    "project-catalyst-plugin@local-desktop-app-uploads": false
+  }
+}
