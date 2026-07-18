@@ -1,0 +1,133 @@
+// ─── Slotable Items: Ability Domain ───────────────────────────────────────────
+import type { StatModifiers } from './types';
+import type { AbilitySlotKey } from './slot-types';
+import type { BaseSlotableCatalogEntry, BaseSlotableInstance } from './base-types';
+
+// ── Targeting System ─────────────────────────────────────────────────────────
+
+export type AbilityTargetingMode = "Self" | "Entity" | "Point" | "Directional" | "Cone" | "Line";
+
+export interface AbilityTargetingConfig {
+  readonly mode: AbilityTargetingMode;
+  readonly rangeStuds: number;
+  readonly requiresLOS: boolean;
+  readonly radiusStuds?: number;
+  readonly coneAngle?: number;
+  readonly lineWidth?: number;
+}
+
+// ── Ability Effects ──────────────────────────────────────────────────────────
+
+export type AbilityEffectType = "Damage" | "Heal" | "Buff" | "Debuff" | "Summon" | "Teleport";
+
+export interface AbilityEffect {
+  readonly type: AbilityEffectType;
+  readonly magnitude: number;
+  readonly scaling?: StatModifiers;
+  readonly durationSec?: number;
+}
+
+// ── Ability School ───────────────────────────────────────────────────────────
+
+export type AbilitySchool = "Combat" | "Magic" | "Utility" | "Ultimate";
+
+// ── Ability Catalog Entry ────────────────────────────────────────────────────
+
+export interface AbilityCatalogEntry extends BaseSlotableCatalogEntry {
+  readonly slotCategory: "Ability";
+  readonly abilityKey: string;
+  readonly basePower: number;
+  readonly castTimeSec: number;
+  readonly cooldownSec: number;
+  readonly resourceCost: number;
+  readonly targeting: AbilityTargetingConfig;
+  readonly effects: readonly AbilityEffect[];
+  /**
+   * Logical name into `@trembus/animation-catalog` (e.g. `"combat.melee.punchLeft"`).
+   *
+   * Resolved at runtime via `getAnimation(animationId)?.assetId`. Previously this
+   * field held a raw `"rbxassetid://N"` string; as of taxonomy.yaml v1.3.0 + the
+   * animation-catalog package, abilities reference animations symbolically so they
+   * survive re-uploads (asset IDs change; logical names don't).
+   *
+   * For animations not yet catalogued, a raw `rbxassetid://` is still tolerated
+   * but discouraged — runtime code should fall back to direct ID only when
+   * `getAnimation` returns undefined.
+   */
+  readonly animationId?: string;
+  readonly soundEffectId?: string;
+  readonly vfxAssetId?: string;
+  readonly powerScaling?: number;
+  readonly maxCharges?: number;
+  readonly chargeRechargeTime?: number;
+  readonly isPassive?: boolean;
+  readonly school?: AbilitySchool;
+  readonly requiredLevel?: number;
+  readonly tradeable?: boolean;
+  readonly sellable?: boolean;
+  readonly sellPrice?: number;
+  readonly unlockRequirements?: {
+    readonly level?: number;
+    readonly questId?: string;
+    readonly prerequisiteAbilityId?: string;
+  };
+}
+
+// ── Ability Instance ─────────────────────────────────────────────────────────
+
+export interface AbilityItemInstance extends BaseSlotableInstance {
+  readonly slotCategory: "Ability";
+  readonly quantity: 1;
+  readonly abilityKey: string;
+  abilityRank?: number;
+  timesUsed?: number;
+  isUnlocked: boolean;
+}
+
+// ── Ability Loadouts ─────────────────────────────────────────────────────────
+
+/** Loadout format: slot → ability key string */
+export type AbilityLoadout = {
+  readonly [Key in AbilitySlotKey]?: string;
+};
+
+/** Instance-based loadout: slot → full item instance */
+export type AbilityInstanceLoadout = {
+  [Key in AbilitySlotKey]?: AbilityItemInstance;
+};
+
+export const DEFAULT_ABILITY_LOADOUT: AbilityLoadout = {
+  Ability1: undefined,
+  Ability2: undefined,
+  Ability3: undefined,
+  Ability4: undefined,
+  Ability5: undefined,
+};
+
+export const DEFAULT_ABILITY_INSTANCE_LOADOUT: AbilityInstanceLoadout = {
+  Ability1: undefined,
+  Ability2: undefined,
+  Ability3: undefined,
+  Ability4: undefined,
+  Ability5: undefined,
+};
+
+// ── Factory ──────────────────────────────────────────────────────────────────
+
+export function createAbilityInstance(
+  catalogEntry: AbilityCatalogEntry,
+  guid: string,
+  ownerUserId: number,
+): AbilityItemInstance {
+  return {
+    guid,
+    catalogId: catalogEntry.id,
+    slotCategory: "Ability",
+    quantity: 1,
+    abilityKey: catalogEntry.abilityKey,
+    acquiredAt: os.time(),
+    ownerUserId,
+    isUnlocked: true,
+    isNew: true,
+  };
+}

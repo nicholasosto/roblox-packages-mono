@@ -1,0 +1,35 @@
+{
+  "name": "@trembus/slotable-items-dissolved",
+  "version": "0.2.0-rc.0",
+  "description": "OPEN-TAXONOMY rebuild (ADR 0005) of @trembus/slotable-items — runtime Category Registry; awaiting cutover. Rename back to @trembus/slotable-items at cutover.",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@trembus/persistent-data": "^0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@trembus/persistent-data": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.914",
+    "@trembus/persistent-data": "workspace:*",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}
