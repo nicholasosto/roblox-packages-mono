@@ -84,7 +84,7 @@ Process documents live in [`docs/sops/`](docs/sops/).
 ## Related
 
 - Consumed by (via `link:` dependencies, sibling repos in `Repositories/Gaming/Roblox-Repositories/`): `../soul-steel-official` and `../roblox-testing-environment`
-- Planning spaces: `~/Master-Managed/Project-Spaces/` — Project-System framework consumers, including `Roblox-Development/Soul-Steel-Official`
+- **Planning space (Project-System consumer):** `~/Master-Managed/Project-Spaces/Roblox-Development/Roblox-Development-Studio/` — wraps this repo via `external-locations/code/`. ADRs live at `_project/decisions/` (ADR 0005 = `0005-open-taxonomy-slotable-items.md`); the packages-explorer dashboard lives in its `previews/`.
 
 
 ## Roblox Brain (roblox-dev plugin)
@@ -93,4 +93,4 @@ This repo uses the roblox-dev plugin's knowledge graph during Roblox/roblox-ts w
 
 - **Recall before authoring** — the roblox-brain skill auto-activates on Roblox keywords and consults the brain index (scars, patterns) before code generation; for the full neighborhood run `/roblox-dev:recall <topic>`.
 - **Capture eagerly** — any bug that cost >15 minutes, or non-obvious API/toolchain behavior, gets `/roblox-dev:capture` (scar) before the task closes.
-- **Conventions** — the roblox-ts skill owns TS→Luau rules + the verified toolchain matrix; the asset-conventions skill owns TGL naming. Operating loop: `Soul-Steel-Official/_project/workflows/roblox-brain-usage.md` in the project space.
+- **Conventions** — the roblox-ts skill owns TS→Luau rules + the verified toolchain matrix; the asset-conventions skill owns TGL naming.

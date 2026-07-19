@@ -239,6 +239,7 @@ Apply this step if the package renders Roblox UI via `@rbxts/react`.
   | `<name>` | `@trembus/<name>` | <one-line description> |
   ```
 - **Output:** Updated `CLAUDE.md` reflecting the full package roster. This is the easiest step to forget; it's also the one that breaks discoverability when forgotten.
+- **Also:** regenerate the packages registry in the planning space so the explorer picks up the new package: `cd ~/Master-Managed/Project-Spaces/Roblox-Development/Roblox-Development-Studio && node tools/build-packages-registry.mjs` (the explorer's drift badge will flag this table if you forget either half).
 
 ### Step 13: Publish to npm
 
