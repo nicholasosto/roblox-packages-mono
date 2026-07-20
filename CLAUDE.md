@@ -33,6 +33,7 @@ Monorepo for reusable roblox-ts packages under the `@trembus` scope. Each packag
 | `slotable-items-dissolved` | `@trembus/slotable-items-dissolved` | Open-taxonomy rebuild (ADR 0005) of `slotable-items` — runtime category registry; awaiting cutover, renames back to `@trembus/slotable-items` when it lands |
 | `stats` | `@trembus/stats` | Two-tier stat system — primary attributes, derived stats, resource pools, and persistence slice |
 | `status-effects` | `@trembus/status-effects` | Generic status effect system — shields, damage calcs, buff tracking, effect aggregation |
+| `studio-telemetry` | `@trembus/studio-telemetry` | Roblox Studio plugin — batched telemetry relay to a local collector; log, game-state, performance, and entity channels (builds `TrembusStudioTelemetry.rbxm`, not a consumable lib) |
 | `timer` | `@trembus/timer` | Framework-agnostic timer system — state machine, formatting, thresholds, and global signal bus |
 | `timer-ui` | `@trembus/timer-ui` | Roblox ScreenGui display and visual effects for `@trembus/timer` — anchoring, color shift, pulse, shake, fade, and more |
 

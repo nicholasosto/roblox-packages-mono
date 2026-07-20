@@ -1,0 +1,24 @@
+{
+  "name": "@trembus/studio-telemetry",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Roblox Studio plugin — batched telemetry relay from Studio to a local collector; log, game-state, performance, and entity channels",
+  "scripts": {
+    "build": "rbxtsc --type model",
+    "build:plugin": "rbxtsc --type model && rojo build default.project.json -o TrembusStudioTelemetry.rbxm",
+    "deploy:plugin": "pnpm build:plugin && cp TrembusStudioTelemetry.rbxm ~/Documents/Roblox/Plugins/",
+    "clean": "rm -rf out"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/services": "^1.6.0",
+    "@rbxts/types": "^1.0.914",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}
