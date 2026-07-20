@@ -22,6 +22,7 @@ Monorepo for reusable roblox-ts packages under the `@trembus` scope. Each packag
 |---------|-------|-------------|
 | `animation-catalog` | `@trembus/animation-catalog` | Typed composable animation catalog — logical names → catalog entries with assetId, rig compatibility, length, priority, and status |
 | `audio` | `@trembus/audio` | Unified audio manager — SFX pooling, music crossfading, volume/mute control |
+| `camera` | `@trembus/camera` | State-machine camera system — follow, orbit, fixed, free-cam, and cinematic states with smooth transitions and shake presets |
 | `currency` | `@trembus/currency` | Currency system — open registry, pure transactions, Wallet runtime, and composable persistence slice |
 | `input-actions` | `@trembus/input-actions` | Multi-device input architecture — Actions, priority-stacked Contexts, and a signal-based Bus; KBM + gamepad + touch with chord support |
 | `logger` | `@trembus/logger` | Structured, tag-based logging with level filtering and formatting |

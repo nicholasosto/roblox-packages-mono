@@ -1,0 +1,30 @@
+{
+  "name": "@trembus/camera",
+  "version": "0.1.0",
+  "description": "State-machine camera system for roblox-ts games — follow, orbit, fixed, free-cam, and cinematic states with smooth transitions and shake presets",
+  "main": "out/init.lua",
+  "types": "out/index.d.ts",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "clean": "rm -rf out"
+  },
+  "peerDependencies": {
+    "@trembus/logger": "^0.1.0"
+  },
+  "devDependencies": {
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "^1.0.914",
+    "@trembus/logger": "workspace:*",
+    "roblox-ts": "^3.0.0",
+    "typescript": "5.5.3"
+  },
+  "author": "Trembus Technologies",
+  "license": "MIT",
+  "volta": {
+    "node": "22.22.0"
+  }
+}

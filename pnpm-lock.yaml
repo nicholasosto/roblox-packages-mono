@@ -47,6 +47,24 @@ importers:
         specifier: 5.5.3
         version: 5.5.3
 
+  packages/camera:
+    devDependencies:
+      '@rbxts/compiler-types':
+        specifier: 3.0.0-types.0
+        version: 3.0.0-types.0
+      '@rbxts/types':
+        specifier: ^1.0.914
+        version: 1.0.915
+      '@trembus/logger':
+        specifier: workspace:*
+        version: link:../logger
+      roblox-ts:
+        specifier: ^3.0.0
+        version: 3.0.0
+      typescript:
+        specifier: 5.5.3
+        version: 5.5.3
+
   packages/currency:
     devDependencies:
       '@rbxts/compiler-types':
