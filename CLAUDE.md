@@ -25,6 +25,7 @@ Monorepo for reusable roblox-ts packages under the `@trembus` scope. Each packag
 | `camera` | `@trembus/camera` | State-machine camera system — follow, orbit, fixed, free-cam, and cinematic states with smooth transitions and shake presets |
 | `currency` | `@trembus/currency` | Currency system — open registry, pure transactions, Wallet runtime, and composable persistence slice |
 | `input-actions` | `@trembus/input-actions` | Multi-device input architecture — Actions, priority-stacked Contexts, and a signal-based Bus; KBM + gamepad + touch with chord support |
+| `inventory-model` | `@trembus/inventory-model` | Positional backpack model — ordered 1-based slots, catalog-driven reconcile, pure move/swap with a stable result-code vocabulary. Owns POSITION only; `slotable-items` owns named slots and eligibility |
 | `logger` | `@trembus/logger` | Structured, tag-based logging with level filtering and formatting |
 | `persistent-data` | `@trembus/persistent-data` | Type-safe player data persistence wrapping @rbxts/profile-store |
 | `pets-and-mounts` | `@trembus/pets-and-mounts` | Pet and mount summoning, follow behavior (AlignPosition), ride mechanics (VehicleSeat + network ownership), and ownership persistence slice |
